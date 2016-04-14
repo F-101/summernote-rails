@@ -6264,9 +6264,10 @@
         return false;
       }
 
-      $video.addClass('note-video-clip');
+      var $embedVideo = $('<div class="embed-responsive embed-responsive-16by9"></div>');
+      $video.addClass('note-video-clip embed-responsive-item').appendTo($embedVideo);
 
-      return $video[0];
+      return $embedVideo[0];
     };
 
     this.show = function () {
